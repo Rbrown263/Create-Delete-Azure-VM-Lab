@@ -13,9 +13,9 @@ You will learn how to:
 
 ---
 
-## 🎯 Agenda for This Lab / Video
+## 🎯 Agenda for This Lab
 
-1. Create a Virtual Machine with **no public IP**
+1. Create a Virtual Machine with or without **public IP**
 2. Connect to the VM
 3. Reset the VM password
 4. Log out of the VM
@@ -36,19 +36,25 @@ You will learn how to:
 
 ---
 
-## Step 1 – Create a Virtual Machine (No Public IP)
+## Step 1 – Create a Virtual Machine (with or without Public IP)
 
 ### 1.1 Log In and Locate Your Resource Group
+
+<img src="docs/1-Azure_Portal.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 1. Sign in to the **Azure Portal**.
 2. At the top search bar, type **“Resource groups”**.
 3. Select **Resource groups** from the results.
 4. Click the resource group that belongs to you (for example, your student or lab resource group).
 
-> 💡 Anything inside your resource group is managed by you as the administrator.
+   <img src="docs/2-Resourcegroup_search.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="docs/3-Resource Student.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+> 💡 Anything in your resource group is managed by you, the administrator.
+<img src="docs/4-Resources.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ### 1.2 Check Your Access (Optional but Recommended)
-
+<img src="docs/5-IAM.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 1. In the left pane of your resource group, select **Access control (IAM)**.
 2. Go to the **Role assignments** tab.
 3. Review the list of users and roles.
