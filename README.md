@@ -55,15 +55,18 @@ You will learn how to:
 
 ### 1.2 Check Your Access (Optional but Recommended)
 <img src="docs/5-IAM.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 1. In the left pane of your resource group, select **Access control (IAM)**.
 2. Go to the **Role assignments** tab.
 3. Review the list of users and roles.
    - If you see **Contributor**, that typically means admin-level permissions for that scope.
+   
 <img src="docs/6-Permissions.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 ---
 
 ### 1.3 Start Creating the Virtual Machine
 <img src="docs/7-VM_Search.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 1. In the top search bar, type **“Virtual machines”** and select it.
 2. You may see existing VMs created by admins or instructors (for example, Cyber-Range class VMs).
 3. Click **Create** → **Azure virtual machine**.
@@ -78,15 +81,17 @@ You will now go through several tabs: **Basics**, **Disks**, **Networking**, **M
 
 Fill in the fields according to your lab or organization’s standards:
 
-
 - **Subscription**:  
   - Select the subscription assigned to you (e.g., `Cyber Range 1`).
+    
 <img src="docs/8-BasicSubscrp.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 - **Resource group**:  
   - Select the correct resource group (e.g., your student resource group).
   - Using the wrong one may cause confusion or policy issues.
  
 <img src="docs/10-Resourcestudnt.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 - **Virtual machine name**:  
   - Example: `RBrown214`
 - **Region**:  
@@ -94,18 +99,25 @@ Fill in the fields according to your lab or organization’s standards:
   - Example: **East US 2**
 - **Availability options / zone**:  
   - Select what your organization or lab specifies.
+
   <img src="docs/11-Availability Zone.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+  
 - **Image**:  
   - Example: **Windows 11 Pro**
+  - 
   <img src="docs/12-OS-select.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+  
 - **Size**:  
   - Select a recommended size.  
   - Example: **Standard_DS_v2** (avoid unnecessarily large/expensive options).
+  - 
  <img src="docs/13-Memory.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+ 
 - **Administrator account**:  
   - Create a **username** and **password** that you will use to log into this VM.
 - **Licensing**:  
   - Check the box confirming you are eligible for a Windows 11 license (if applicable).
+  - 
   <img src="docs/14-usrpwd.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 Click **Next: Disks**.
@@ -113,11 +125,14 @@ Click **Next: Disks**.
 ---
 
 ### 1.5 Disks Tab
+
  <img src="docs/15-image.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+ 
 1. Choose the **OS disk type** according to your lab or organization’s recommendation.
    - Example: **Standard HDD** (cost-effective)
 2. Keep other defaults unless instructed otherwise.
 3. Click **Next: Networking**.
+
 <img src="docs/16-drive.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 
@@ -130,19 +145,29 @@ Configure the networking carefully:
 - **Virtual network**:  
   - Select the VNet assigned to your lab.  
   - Example: `CyberRange-VNet`
+    
  <img src="docs/17-VMNetwork.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+ 
 - **Subnet**:  
   - Example: `CyberRange-Subnet`
+  - 
  <img src="docs/18-subnet.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+ 
 - **Public IP**:  
-  - For this lab, set **Public IP = None** (no public IP).  
-  - This is important for a more secure, private VM for vulnerability assessment.
+  - You can choose to have a public IP or no Public IP, set **Public IP = None** (no public IP).  
+  - This is important for a more secure, private VM for vulnerability assessment./
+  - Choosing to have a public IP if you are conducting a SOC operation to open all traffic, set the Public IP with your username.
+ 
+ <img src="docs/19-IP-pub-priv.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+    
 - **Network security group (NSG)**:  
   - Select the recommended NSG (for example, a lab-provided NSG).
 - **NIC network security group**:  
   - Use the organization’s standard configuration.
 - **NIC delete option**:  
   - Check **"Delete NIC when VM is deleted"** so that the NIC is removed automatically with the VM.
+ 
+  <img src="docs/20-NIC=sec-grp.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 Click **Next: Management**.
 
@@ -155,6 +180,9 @@ For this lab:
 - Keep the default settings, unless your organization requires otherwise.
 - No additional configuration is needed here.
 
+ <img src="docs/21-Mngmt.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+  <img src="docs/22-Mgmt2.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 Click **Next: Monitoring**.
 
 ---
@@ -163,12 +191,17 @@ Click **Next: Monitoring**.
 
 - **Boot diagnostics**: **Disable** (for this lab, we don’t need it).
 - Keep other defaults as appropriate.
-
+  
+ <img src="docs/23-Monitoring.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+  <img src="docs/24-boot-diabl.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+ 
 Click **Next: Review + create**.
 
 ---
 
 ### 1.9 Review + Create
+
+<img src="docs/25-review.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 1. Review all your settings:
    - Subscription
@@ -176,11 +209,16 @@ Click **Next: Review + create**.
    - VM name and size
    - Region
    - Disk type
-   - Networking (verify **No Public IP**)
+   - Networking (verify **Public IP or NO Public IP**)
 2. If everything looks correct, click **Create**.
 
 Azure will begin deployment and show **“Deployment in progress”**.  
+
+<img src="docs/26-dplymt-prog.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 Once finished, you will see **“Your deployment is complete.”**
+
+<img src="docs/27-dplymt-done.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 Click **Go to resource** to view your new VM.
 
@@ -188,20 +226,28 @@ Click **Go to resource** to view your new VM.
 
 ## Step 2 – Connect to the VM via Bastion
 
+<img src="docs/29-VM-search.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 1. In Azure, go to **Virtual machines** and locate your VM (e.g., `RBrown214`).
 2. Open the VM.
 3. At the top, click **Connect** → select **Bastion**.
 4. In the Bastion screen:
    - Enter the **username** and **password** you set during VM creation.
    - Click **Connect**.
+  
+<img src="docs/31-connect.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="docs/32-connect-bastion.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 > ⚠️ If nothing happens, check your browser’s pop-up blocker and allow pop-ups for the Azure portal.
 
 ---
+<img src="docs/33-entr-usr-pwd.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 ## Step 3 – Reset the VM Password (If Needed)
 
 If you forget your password:
+
+<img src="docs/34-pwd-reset.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 1. Make sure the VM is **Started**:
    - On the VM overview page, click **Start** if the VM is stopped.
@@ -210,10 +256,16 @@ If you forget your password:
 3. Select the reset mode (e.g., **Reset password**).
 4. Enter a new password and save.
 5. Go back to **Connect → Bastion** and use the new credentials.
+6. Once you have successfully logged in, Windows 11 should start booting.
+
+<img src="docs/35-login.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="docs/36-logedin-to-VM.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 ---
 
 ## Step 4 – Log Out From the VM
+
+<img src="docs/37-shutdown.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 From inside the VM session:
 
@@ -229,18 +281,26 @@ This shuts down the guest OS, similar to turning off a physical desktop.
 
 Even after shutting down inside the OS, you should also stop the VM resource in Azure to avoid unnecessary costs.
 
+<img src="docs/38-VM-turnoff.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 1. In the Azure portal, go back to **Virtual machines**.
 2. Select your VM.
 3. Click **Stop** at the top of the page.
 4. Wait until the **Status** changes to **Stopped (deallocated)**.
 
+<img src="docs/39-VM-stop.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 > 💰 **Cost tip:** “Stopped (deallocated)” means the VM is fully stopped and no longer accumulating compute charges.
+
+<img src="docs/40-VM-stopped.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 ---
 
 ## Step 6 – Delete the VM
 
 When you are completely done with the lab:
+
+<img src="docs/41-VM-Delete.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 1. Go to **Virtual machines** (VM list view).
 2. Check the box next to the VM you want to delete.
@@ -250,6 +310,9 @@ When you are completely done with the lab:
    - Type `delete`.
    - Check **Apply force delete** (if required).
    - Confirm the delete.
+  
+  <img src="docs/42-VM-confirm-del.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+  <img src="docs/43-Vm-delete-2.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 Because we selected **“Delete NIC when VM is deleted”**, the associated network interface will also be removed.
 
@@ -258,6 +321,7 @@ To verify deletion:
 - Return to the **Virtual machines** list.
 - The VM should no longer appear.
 
+ <img src="docs/44-VM-deleted.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 ---
 
 ## 🧹 Cleanup Summary
