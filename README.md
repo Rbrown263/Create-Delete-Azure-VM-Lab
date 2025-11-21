@@ -59,11 +59,11 @@ You will learn how to:
 2. Go to the **Role assignments** tab.
 3. Review the list of users and roles.
    - If you see **Contributor**, that typically means admin-level permissions for that scope.
-
+<img src="docs/6-Permissions.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 ---
 
 ### 1.3 Start Creating the Virtual Machine
-
+<img src="docs/7-VM_Search.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 1. In the top search bar, type **“Virtual machines”** and select it.
 2. You may see existing VMs created by admins or instructors (for example, Cyber-Range class VMs).
 3. Click **Create** → **Azure virtual machine**.
