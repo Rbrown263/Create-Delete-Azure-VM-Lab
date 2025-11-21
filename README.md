@@ -40,33 +40,35 @@ You will learn how to:
 
 ### 1.1 Log In and Locate Your Resource Group
 
-<img src="docs/1-Azure_Portal.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="docs/1-Azure_Portal.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 1. Sign in to the **Azure Portal**.
 2. At the top search bar, type **“Resource groups”**.
 3. Select **Resource groups** from the results.
 4. Click the resource group that belongs to you (for example, your student or lab resource group).
 
-   <img src="docs/2-Resourcegroup_search.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-    <img src="docs/3-Resource Student.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+   <img src="docs/2-Resourcegroup_search.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+    <img src="docs/3-Resource Student.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 > 💡 Anything in your resource group is managed by you, the administrator.
-<img src="docs/4-Resources.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="docs/4-Resources.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 ### 1.2 Check Your Access (Optional but Recommended)
-<img src="docs/5-IAM.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="docs/5-IAM.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 1. In the left pane of your resource group, select **Access control (IAM)**.
 2. Go to the **Role assignments** tab.
 3. Review the list of users and roles.
    - If you see **Contributor**, that typically means admin-level permissions for that scope.
-<img src="docs/6-Permissions.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="docs/6-Permissions.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 ---
 
 ### 1.3 Start Creating the Virtual Machine
-<img src="docs/7-VM_Search.png.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="docs/7-VM_Search.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 1. In the top search bar, type **“Virtual machines”** and select it.
 2. You may see existing VMs created by admins or instructors (for example, Cyber-Range class VMs).
 3. Click **Create** → **Azure virtual machine**.
+
+<img src="docs/9-VMList.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 You will now go through several tabs: **Basics**, **Disks**, **Networking**, **Management**, **Monitoring**, and **Review + create**.
 
@@ -76,11 +78,15 @@ You will now go through several tabs: **Basics**, **Disks**, **Networking**, **M
 
 Fill in the fields according to your lab or organization’s standards:
 
+
 - **Subscription**:  
   - Select the subscription assigned to you (e.g., `Cyber Range 1`).
+<img src="docs/8-BasicSubscrp.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Resource group**:  
   - Select the correct resource group (e.g., your student resource group).
   - Using the wrong one may cause confusion or policy issues.
+ 
+<img src="docs/10-Resourcestudnt.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Virtual machine name**:  
   - Example: `RBrown214`
 - **Region**:  
@@ -88,15 +94,19 @@ Fill in the fields according to your lab or organization’s standards:
   - Example: **East US 2**
 - **Availability options / zone**:  
   - Select what your organization or lab specifies.
+  <img src="docs/11-Availability Zone.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Image**:  
   - Example: **Windows 11 Pro**
+  <img src="docs/12-OS-select.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Size**:  
   - Select a recommended size.  
   - Example: **Standard_DS_v2** (avoid unnecessarily large/expensive options).
+ <img src="docs/13-Memory.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Administrator account**:  
   - Create a **username** and **password** that you will use to log into this VM.
 - **Licensing**:  
   - Check the box confirming you are eligible for a Windows 11 license (if applicable).
+  <img src="docs/14-usrpwd.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 Click **Next: Disks**.
 
