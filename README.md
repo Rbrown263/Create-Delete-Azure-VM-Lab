@@ -113,11 +113,13 @@ Click **Next: Disks**.
 ---
 
 ### 1.5 Disks Tab
-
+ <img src="docs/15-image.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 1. Choose the **OS disk type** according to your lab or organization’s recommendation.
    - Example: **Standard HDD** (cost-effective)
 2. Keep other defaults unless instructed otherwise.
 3. Click **Next: Networking**.
+<img src="docs/16-drive.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
 
 ---
 
@@ -128,8 +130,10 @@ Configure the networking carefully:
 - **Virtual network**:  
   - Select the VNet assigned to your lab.  
   - Example: `CyberRange-VNet`
+ <img src="docs/17-VMNetwork.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Subnet**:  
   - Example: `CyberRange-Subnet`
+ <img src="docs/18-subnet.png.PNG" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 - **Public IP**:  
   - For this lab, set **Public IP = None** (no public IP).  
   - This is important for a more secure, private VM for vulnerability assessment.
